@@ -13,7 +13,7 @@ const HttpIntercepter = () => {
 
     axiosClient.interceptors.request.use(async (config) => {
 
-        //TODO:Please to inlcude AuthorizationHeader
+        //TODO:Place to inlcude AuthorizationHeader
         return config;
     });
 
