@@ -12,13 +12,20 @@ export const AppRoutes = () => {
 
     const routes = useRoutes(
         [
-          {path:'/people',element: 
+          {path:'',element: 
           (
             <PeoplesDataProvider state={peoplesState}>
             < PeopleBlock />
             </PeoplesDataProvider>
           )
         },
+        {path:'/people',element: 
+          (
+            <PeoplesDataProvider state={peoplesState}>
+            < PeopleBlock />
+            </PeoplesDataProvider>
+          )
+        }
         ]
       )
       return routes;
