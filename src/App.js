@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import PeopleBlock from './components/blocks/PeopleBlock';
+import { PeoplesDataProvider,usePeoples } from './components/blocks/PeopleBlock/Providers';
 
 function App() {
+
+  const peoplesState = usePeoples();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <PeoplesDataProvider state={peoplesState}>
+        < PeopleBlock />
+      </PeoplesDataProvider>
     </div>
   );
 }
