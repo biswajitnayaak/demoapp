@@ -1,0 +1,11 @@
+{
+    "people":{
+        "list":{
+            "headerText":"People lists",
+            "retrievalError":"Error retrieving people list."
+        },
+        "detail":{
+            "closeButtonText": "Close"
+        }
+    }
+}
