@@ -1,7 +1,7 @@
 
 
 const _api_base= "https://swapi.dev/api";
-const _api_route = process.env.REACT_APP_API_ROUTE;
+// const _api_route = process.env.REACT_APP_API_ROUTE;
 
 
 
