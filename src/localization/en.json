@@ -1,7 +1,7 @@
 {
     "people":{
         "list":{
-            "headerText":"People lists",
+            "headerText":"Peoples list",
             "retrievalError":"Error retrieving people list."
         },
         "detail":{
