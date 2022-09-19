@@ -66,10 +66,6 @@ export const usePeoples = () => {
         axiosClient
             .get(target, config)
             .then(({ data }) => {
-                console.log('After API called');
-
-                console.log(data.results);
-
                 dispatch({
                     type: actionTypes.INITIAL_LOAD,
                     data: { peoples: data.results } || { peoples: [] }
