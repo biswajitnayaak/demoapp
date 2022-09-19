@@ -1,4 +1,4 @@
-import {useState , useMemo, useReducer} from 'react';
+import {useState , useMemo, useReducer, useEffect} from 'react';
 import styled from 'styled-components';
 import { PeopleListColumns} from './../Helpers';
 import { usePeoplesContext ,actionTypes} from '../Providers';
@@ -16,12 +16,8 @@ const PeopleListDesktopTablet = () => {
     
     const peoplesData = useMemo(() => { 
         const completeList = peopleState?.data?.peoples;
-        
         if(filterBy)
         {
-            console.log('FILTER BY');
-            console.log(filterBy);
-
             const filteredByList = completeList?.filter(people => people.name.toLocaleLowerCase().includes(filterBy.toLocaleLowerCase()) || 
             people.hair_color.toLocaleLowerCase().includes(filterBy.toLocaleLowerCase()));
 
@@ -35,7 +31,7 @@ const PeopleListDesktopTablet = () => {
         }
         else 
             return completeList?.slice(page*PAGE_COUNT, (page*PAGE_COUNT)+PAGE_COUNT);
-   },[page,filterBy])
+   },[peopleState?.data?.peoples,page,filterBy])
 
     const nextPage = () => {
         setPage(prev => prev+1);
